@@ -1,7 +1,6 @@
 public class Reduce {
-    public static void main(String[] args) {
+    public static int reduce(int num) {
         int counter = 0;
-        int num = 100;
         while (num > 0){
             if (num % 2 == 0) {
                 num = num / 2;
@@ -12,6 +11,10 @@ public class Reduce {
                 counter++;
             }
         }
-        System.out.println("The number of steps it takes to reach 0 if you start at 100 is " + counter);
+        return counter;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reduce(100));
     }
 }
